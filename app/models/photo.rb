@@ -4,4 +4,6 @@ class Photo < ActiveRecord::Base
   belongs_to :horse
 
   mount_uploader :file, PhotoFileUploader
+validates_presence_of :horse_id
+
 end
