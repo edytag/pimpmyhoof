@@ -12,7 +12,7 @@
 <% @photos.each do |photo| %>
   <tr>
     <td><%= photo.horse.name %></td>
-    <td><%= photo.file %></td>
+    <td><%= image_tag photo.file %></td>
     <td><%= link_to 'Show', [photo.horse, photo] %></td>
     <td><%= link_to 'Edit', edit_horse_photo_path(photo.horse, photo) %></td>
     <td><%= link_to 'Destroy', [photo.horse, photo], confirm: 'Are you sure?', method: :delete %></td>
