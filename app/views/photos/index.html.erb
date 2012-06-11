@@ -1,0 +1,26 @@
+<h1>Listing photos</h1>
+
+<table>
+  <tr>
+    <th>Horse</th>
+    <th>File</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.horse.name %></td>
+    <td><%= photo.file %></td>
+    <td><%= link_to 'Show', [photo.horse, photo] %></td>
+    <td><%= link_to 'Edit', edit_horse_photo_path(photo.horse, photo) %></td>
+    <td><%= link_to 'Destroy', [photo.horse, photo], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Photo', new_horse_photo_path(@horse) %> |
+<%= link_to 'Back', horse_path(@horse) %>

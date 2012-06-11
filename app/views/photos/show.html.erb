@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Horse:</b>
+  <%= @photo.horse.name %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @photo.file %>
+</p>
+
+
+<%= link_to 'Edit', edit_horse_photo_path(@horse, @photo) %> |
+<%= link_to 'Back', horse_photos_path(@horse) %>
